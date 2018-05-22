@@ -4,33 +4,6 @@
 
 {% block content %}
 
-<div class="row">
-  <div class="col-md-6">
-    <form action="{{ url_for('users.login') }}" method="post">
-        {{ form.csrf_token }}
-        <div class="form-group">
-          {{ form.email.label }}
-          {{ render_field(form.email, class="form-control", placeholder="Email address") }}
-        </div>
-        <div class="form-group">
-          {{ form.password.label }}
-          {{ render_field(form.password, class="form-control", placeholder="Password") }}
-        </div>
-        <input type="submit" value="Log In" class="btn btn-lg btn-success">
-        <p><br /><em><a href="/reset">Forgot your password?</a></em></p>
-    </form>
-  </div>
-  <div class="col-md-6">
-    <h3>Start your new MVP today!</h3>
-    <h4>Flask App Blueprint: focus on your unique idea.</h4>
-    <p>With Flask App Blueprint you have a simple to start direclty with your idea, without spending way to much time fixing the basics. Get going, start today.</p>
-    <p><em>Don't have an account yet?</em> <a href="{{ url_for('users.register') }}">Sign up for free!</a></p>
-  </div>
-</div>
-
-
-{% endblock %}
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -42,13 +15,13 @@
     <title>Slack: Where work happens</title>
 
     <!-- Styles -->
-    <link href="assets/css/core.min.css" rel="stylesheet">
-    <link href="assets/css/thesaas.min.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="static/css/core.min.css" rel="stylesheet">
+    <link href="static/css/thesaas.min.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-    <link rel="icon" href="assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="static/img/apple-touch-icon.png">
+    <link rel="icon" href="static/img/favicon.png">
   </head>
 
   <body id="home">
@@ -61,7 +34,7 @@
         <div class="topbar-left">
           <button class="topbar-toggler">&#9776;</button>
           <a class="topbar-brand" href="index.html">
-            <img class="logo-default" src="assets/img/demo/slack/logo.png" alt="logo">
+            <img class="logo-default" src="static/img/demo/slack/logo.png" alt="logo">
           </a>
         </div>
 
@@ -98,7 +71,7 @@
           </div>
 
           <div class="col-12 col-lg-6 offset-lg-1 img-outside-right hidden-md-down">
-            <img class="shadow-4" src="assets/img/demo/slack/dashboard.jpg" alt="...">
+            <img class="shadow-4" src="static/img/demo/slack/dashboard.jpg" alt="...">
           </div>
 
         </div>
@@ -153,7 +126,7 @@
             </div>
 
             <div class="col-12 offset-md-1 col-md-5 text-center">
-              <img src="assets/img/demo/slack/everywhere.png" alt="...">
+              <img src="static/img/demo/slack/everywhere.png" alt="...">
             </div>
           </div>
 
@@ -163,7 +136,7 @@
 
           <div class="row gap-y align-items-center">
             <div class="col-12 col-md-5 text-center">
-              <img src="assets/img/demo/slack/tools.png" alt="...">
+              <img src="static/img/demo/slack/tools.png" alt="...">
             </div>
 
             <div class="col-12 offset-md-1 col-md-6">
@@ -494,3 +467,35 @@
 
   </body>
 </html>
+<!-- 
+<div class="row">
+  <div class="col-md-6">
+    <form action="{{ url_for('users.login') }}" method="post">
+        {{ form.csrf_token }}
+        <div class="form-group">
+          {{ form.email.label }}
+          {{ render_field(form.email, class="form-control", placeholder="Email address") }}
+        </div>
+        <div class="form-group">
+          {{ form.password.label }}
+          {{ render_field(form.password, class="form-control", placeholder="Password") }}
+        </div>
+        <input type="submit" value="Log In" class="btn btn-lg btn-success">
+        <p><br /><em><a href="/reset">Forgot your password?</a></em></p>
+    </form>
+  </div>
+  <div class="col-md-6">
+    <h3>Start your new MVP today!</h3>
+    <h4>Flask App Blueprint: focus on your unique idea.</h4>
+    <p>With Flask App Blueprint you have a simple to start direclty with your idea, without spending way to much time fixing the basics. Get going, start today.</p>
+    <p><em>Don't have an account yet?</em> <a href="{{ url_for('users.register') }}">Sign up for free!</a></p>
+  </div>
+</div> -->
+
+
+{% endblock %}
+
+
+
+
+
